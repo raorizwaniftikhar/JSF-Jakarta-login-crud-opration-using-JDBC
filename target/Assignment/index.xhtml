@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Student Managment System</title>
+	<style type="text/css">
+		.textPlacement {
+			margin: 12px;
+		}
+	</style>
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
+</h:head>
+<h:body>
+	<h:form id="loginForm" class="form-horizontal" >
+		<div class="form-group">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+				<h2>Student Authentication</h2>
+			</div>
+		</div>
+		<hr/>
+
+		<div id="userNameDiv" class="form-group">
+			<h:outputLabel class="control-label col-sm-4" value="Username: " />
+			<div class="col-sm-4">
+			<h:inputText value="#{loginBean.login.username}" class="form-control" />
+			</div>
+		</div>
+
+		<div id="passwordDiv" class="form-group">
+			<h:outputLabel class="control-label col-sm-4" value="Password: " />
+			<div class="col-sm-4">
+			<h:inputSecret value="#{loginBean.login.password}" class="form-control" />
+		</div>
+		</div>
+
+		<div id="submitBtn" class="form-group">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+				<div class="col-sm-2">
+			<h:commandButton value="Login" action="#{loginBean.validateUserLogin}" class="btn btn-success" />
+				</div>
+			</div>
+		<div class="col-sm-4">
+			<h2>
+				<a href="createStudent.xhtml?faces-redirect=true" class="btn btn-success">Sign Up</a>
+			</h2>
+		</div>
+		</div>
+	</h:form>
+
+</h:body>
+</html>

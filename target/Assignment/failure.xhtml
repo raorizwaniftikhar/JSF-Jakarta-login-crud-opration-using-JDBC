@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>JSF Authentication</title>
+	<style type="text/css">
+		.errorText {
+			color: red;
+			margin: 12px;
+			font-weight: bold;
+		}
+	</style>
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
+</h:head>
+<h:body>
+	<h2>
+		<a href="/?faces-redirect=true"  class="btn btn-success">Login</a>
+	</h2>
+	<div id="resultErr">
+		<h2 id="invalidCre" class="errorText">Invalid Credentials</h2>
+	</div>
+</h:body>
+</html>
